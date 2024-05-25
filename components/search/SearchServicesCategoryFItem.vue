@@ -1,0 +1,56 @@
+<script setup lang="ts">
+const set6 = ref<string[]>()
+</script>
+
+<template>
+  <div class="flex flex-col gap-[18px]">
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-1"
+      for-label="set6-1"
+      value="set6-1"
+      label="set6-1"
+    />
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-2"
+      for-label="set6-2"
+      value="set6-2"
+      label="set6-2"
+    />
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-3"
+      for-label="set6-3"
+      value="set6-3"
+      label="set6-3"
+    />
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-4"
+      for-label="set6-4"
+      value="set6-4"
+      label="set6-4"
+    />
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-5"
+      for-label="set6-5"
+      value="set6-5"
+      label="set6-5"
+    />
+    <ui-checkbox
+      v-model="set6"
+      name="set6"
+      input-id="set6-6"
+      for-label="set6-6"
+      value="set6-6"
+      label="set6-6"
+    />
+  </div>
+</template>

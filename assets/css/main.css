@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__nuxt {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+@layer components {
+	html {
+		@apply h-full;
+	}
+	body {
+		@apply h-full font-sans bg-white text-black100;
+	}
+}
+
+@layer components {
+	.container {
+		@apply max-w-[1039px] my-0 mx-auto px-4 laptop:max-w-[1524px] laptop:px-[250px];
+	}
+}
+
+.sidebar {
+	/* box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0); */
+
+	transition: all 0.5s ease, box-shadow 0.2s ease 0.5s;
+	@apply z-10 laptop:z-0 translate-x-[-100%] laptop:translate-x-0 fixed top-0 left-0 right-0 bottom-0 h-screen laptop:h-auto laptop:static bg-white laptop:bg-transparent flex flex-col laptop:items-start pr-10 py-10 w-fit shrink-0   ;
+}
+
+.sidebar.show-mobile {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
+	overflow-y: auto;
+	transform: translateX(0);
+
+	padding-top: 72px;
+
+	box-shadow: 0px 0px 0px 100vw rgba(0,0,0,.5);
+	transition: all 0.5s ease 0.2s, box-shadow 0.2s ease;
+}
+
+
+.p-dropdown-item:hover {
+	background: #DEE0E3;
+}
+.p-paginator-page.p-paginator-element:hover {
+	background: #DEE0E3;
+}
+.checkbox-black:hover .p-radiobutton.p-component .p-radiobutton-box,
+.checkbox-black:hover .p-checkbox.p-component .p-checkbox-box {
+	background: #DEE0E3;
+}
+.checkbox-black .p-radiobutton.p-component .p-radiobutton-box .p-radiobutton-icon,
+.checkbox-black .p-radiobutton.p-component .p-radiobutton-box {
+	background: #DEE0E3;
+}
+.checkbox-black:hover .p-radiobutton.p-component .p-radiobutton-box {
+	opacity: .8;
+}
+.checkbox-black .p-radiobutton.p-component input:checked+.p-radiobutton-box .p-radiobutton-icon,
+.checkbox-black:hover .p-checkbox.p-component input:checked+.p-checkbox-box {
+	background: #464A53;
+}
+.checkbox-white:hover .p-radiobutton.p-component .p-radiobutton-box,
+.checkbox-white:hover .p-checkbox.p-component .p-checkbox-box {
+	background: #464A53;
+}
+.checkbox-white .p-radiobutton.p-component input:checked+.p-radiobutton-box,
+.checkbox-white .p-checkbox.p-component input:checked+.p-checkbox-box,
+.checkbox-white:hover .p-radiobutton.p-component .p-radiobutton-box,
+.checkbox-white:hover .p-checkbox.p-component input:checked+.p-checkbox-box {
+	background: #E9EAEC;
+}
+
+.p-dialog.p-component.p-ripple-disabled {
+	border-radius: 40px;
+}
+.gmnoprint {
+	display: none;
+}
